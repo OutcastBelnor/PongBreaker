@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerBoard : MonoBehaviour
+public class PlayerOne : MonoBehaviour
 {
     public float moveSpeed;
 
