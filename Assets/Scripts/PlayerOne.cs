@@ -3,14 +3,13 @@ using System.Collections;
 
 public class PlayerOne : MonoBehaviour
 {
-    public float moveSpeed;
-
+    private float moveSpeed;
     private float axis;
     private float movementValue;
 
     void Start()
     {
-        moveSpeed = 1f;
+        moveSpeed = 5f;
     }
 
     // Update is called once per frame
@@ -18,7 +17,7 @@ public class PlayerOne : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
-            axis = Input.GetAxis("Vertical");
+            axis = Input.GetAxisRaw("Vertical");
             movementValue = moveSpeed * axis * Time.deltaTime;
 
             this.transform.Translate(0f, movementValue, 0f);
