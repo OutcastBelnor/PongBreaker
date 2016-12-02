@@ -24,7 +24,7 @@ GameObject:
   - 50: {fileID: 50000013924194212}
   - 61: {fileID: 61000013002861164}
   m_Layer: 0
-  m_Name: PlayerOne
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4591ac5cd10e654289eb42213d3c6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerOne: 1
+  playerOne: 0
   playerTwo: 0
 --- !u!212 &212000010839629186
 SpriteRenderer:

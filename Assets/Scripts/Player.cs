@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         movementValue = moveSpeed * axis * Time.deltaTime;
 
         this.transform.Translate(0f, movementValue, 0f);
-        this.transform.position = new Vector3(this.transform.position.x, Mathf.Clamp(this.transform.position.y, 0.6f, 9.4f), 0f);
+        this.transform.position = new Vector3(this.transform.position.x, Mathf.Clamp(this.transform.position.y, 0.96f, 8.3f), 0f);
     }
 
     public int Score
