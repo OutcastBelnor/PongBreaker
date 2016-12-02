@@ -28,7 +28,7 @@ public class Ball : MonoBehaviour
                 gameStarted = true;
 
                 Rigidbody2D rigidbody2D = this.GetComponent<Rigidbody2D>();
-                rigidbody2D.velocity = new Vector2(-10f, 2f);
+                rigidbody2D.velocity = new Vector2(-6f, 1f);
             }
         }
 	}
