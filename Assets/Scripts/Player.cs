@@ -9,10 +9,12 @@ public class Player : MonoBehaviour
     private float moveSpeed;
     private float axis;
     private float movementValue;
+    private int score;
 
     void Start()
     {
         moveSpeed = 5f;
+        score = 0;
     }
 
     // Update is called once per frame
@@ -42,5 +44,16 @@ public class Player : MonoBehaviour
 
         this.transform.Translate(0f, movementValue, 0f);
         this.transform.position = new Vector3(this.transform.position.x, Mathf.Clamp(this.transform.position.y, 0.6f, 9.4f), 0f);
+    }
+
+    public int Score
+    {
+        get { return score; }
+    }
+
+    // This method adds points to the score
+    public void addPoints(int points)
+    {
+        score += points;
     }
 }
