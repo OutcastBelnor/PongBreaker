@@ -3,17 +3,17 @@ using System.Collections;
 
 public class Ball : MonoBehaviour
 {
-    public Player player;
+    public Player playerOne;
+    public Player playerTwo;
 
     private Vector3 ballPos;
     private bool gameStarted = false;
-    private string playerName;
+    private string activePlayer = "one";
 
 	// Use this for initialization
 	void Start ()
     {
-        //playerName = player.name;
-        ballPos = player.transform.position - this.transform.position;
+        ballPos = playerOne.transform.position - this.transform.position;
     }
 	
 	// Update is called once per frame
@@ -21,7 +21,14 @@ public class Ball : MonoBehaviour
     {
 	    if (!gameStarted)
         {
-            this.transform.position = player.transform.position - ballPos;
+            if (activePlayer == "one")
+            {
+                this.transform.position = playerOne.transform.position - ballPos;
+            }
+            else if (activePlayer == "two")
+            {
+                this.transform.position = playerTwo.transform.position - ballPos;
+            }
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -33,11 +40,42 @@ public class Ball : MonoBehaviour
         }
 	}
 
+    // Detect collision with objects
+    // and bounce off of them
     private void OnCollision2D (Collision2D collision)
     {
         Vector2 correction = new Vector2(Random.Range(0f, 0.3f), Random.Range(0f, 0.3f));
 
         Rigidbody2D rigidbody2D = this.GetComponent<Rigidbody2D>();
         rigidbody2D.velocity += correction;
+    }
+
+    // Set the ball position at the losing player board
+    // after each point lost
+    public void setBallPos(Vector3 playerPos)
+    {
+        print("Setting ballPos...");
+
+        if (playerPos.Equals(playerOne.transform.position))
+        {
+            activePlayer = "one";
+        }
+        else
+        {
+            activePlayer = "two";
+        }
+
+        Vector3 pos = playerPos;
+        if (pos.x < 8)
+        {
+            pos.x += 0.4f;
+        }
+        else
+        {
+            pos.x -= 0.4f;
+        }
+
+        ballPos = playerPos - pos;
+        gameStarted = false;
     }
 }
