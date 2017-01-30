@@ -202,6 +202,11 @@ Prefab:
       propertyPath: playerOne
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010642990950, guid: f3b7eeb1071cfda409d2fdd5242638d9,
+        type: 2}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1661758320}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3b7eeb1071cfda409d2fdd5242638d9, type: 2}
   m_IsPrefabParent: 0
@@ -374,7 +379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b226acbe68b0c46a49130579f063fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 1661758320}
   player: {fileID: 1928545518}
   loser: {fileID: 284619061}
   ball: {fileID: 388722893}
@@ -537,7 +541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b226acbe68b0c46a49130579f063fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 1661758320}
   player: {fileID: 284619061}
   loser: {fileID: 1928545518}
   ball: {fileID: 388722893}
@@ -1213,7 +1216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b226acbe68b0c46a49130579f063fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 1661758320}
   player: {fileID: 284619061}
   loser: {fileID: 1928545518}
   ball: {fileID: 388722893}
@@ -1531,6 +1533,11 @@ Prefab:
       propertyPath: playerOne
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010642990950, guid: f3b7eeb1071cfda409d2fdd5242638d9,
+        type: 2}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1661758320}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3b7eeb1071cfda409d2fdd5242638d9, type: 2}
   m_IsPrefabParent: 0
@@ -1812,7 +1819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b226acbe68b0c46a49130579f063fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 1661758320}
   player: {fileID: 284619061}
   loser: {fileID: 1928545518}
   ball: {fileID: 388722893}

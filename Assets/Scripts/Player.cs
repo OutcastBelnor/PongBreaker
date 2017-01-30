@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+    public LevelManager levelManager;
+
     public bool playerOne = false;
     public bool playerTwo = false;
 
@@ -55,5 +57,18 @@ public class Player : MonoBehaviour
     public void addPoints(int points)
     {
         score += points;
+    }
+
+    // Loads appropriate win screen
+    public void loadWinScreen()
+    {
+        if (playerOne)
+        {
+            levelManager.LoadLevel("PlayerOneWin");
+        }
+        else if (playerTwo)
+        {
+            levelManager.LoadLevel("PlayerTwoWin");
+        }
     }
 }
