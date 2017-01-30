@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        ballPos = playerOne.transform.position - this.transform.position;
+        ballPos = playerOne.transform.position - this.transform.position; // calculating starting position
     }
 	
 	// Update is called once per frame
@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
     {
 	    if (!gameStarted)
         {
-            if (activePlayer == "one")
+            if (activePlayer == "one") // ball starting position depends on the starting player
             {
                 this.transform.position = playerOne.transform.position - ballPos;
             }
@@ -30,12 +30,12 @@ public class Ball : MonoBehaviour
                 this.transform.position = playerTwo.transform.position - ballPos;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)) // pressing space will start the game
             {
                 gameStarted = true;
 
                 Rigidbody2D rigidbody2D = this.GetComponent<Rigidbody2D>();
-                rigidbody2D.velocity = new Vector2(-6f, 1f);
+                rigidbody2D.velocity = new Vector2(-6f, 1f); // assigning starting velocity
             }
         }
 	}
