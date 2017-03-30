@@ -23,13 +23,6 @@ public class Score : MonoBehaviour
 
     private void DisplayingScore(int score)
     {
-        if (score < 10)
-        {
-            text.text = "0" + score;
-        }
-        else
-        {
-            text.text = "" + score;
-        }
+        text.text = "" + score;
     }
 }
